@@ -1,0 +1,344 @@
+;;Author: Malcolm Tyrrell
+
+;;Title: First Principles
+;;Solution(Pushes): rRRuLdrRurr
+;;Solution(Moves): rRRuLdrRurr
+#######
+# $ $ *
++ $   #
+#######
+
+;;Title: Humble Origins
+;Variant of the original "Humble Origins"
+;;Solution(Pushes): rdRRurRdLuLrdLLrurRdrrr
+;;Solution(Moves): rdRRurRdLuLrdLLrurRdrrr
+#########
++ $  $$ #
+# $  $  *
+#########
+
+;;Title: Baby Steps
+;;Solution(Pushes): rddRRuRuLrdLurRdRdLLuuLrdLurRdRdLruLdrrur
+;;Solution(Moves): rddRRuRuLrdLurRdRdLLuuLrdLurRdLdRRurr
+#########
++ $$  $$#
+# $ $ $ *
+# $$ $  #
+#########
+
+;;Title: Easy Does It
+;;Solution(Pushes): rurRdRRuLuLrdRdLLuurRdLuLrdLurRddRRurr
+;;Solution(Moves): rurRdRRuLuLrdRdLLuurRdLuLrdLurRddRRurr
+##########
+#  $  $$$#
+#  $ $ $ *
++ $ $ $  #
+##########
+
+;;Title: Little Rascal
+;;Solution(Pushes): ruuuRRddRdlLuluurrdLddrRuLdLruLdrRuruuLLLrrrddldlLuuurrrdddr
+;;Solution(Moves): ruuuRRddRdlLuluurrdLddrRuLdLruLdrRuruuLLLddRdLruLuurrrdddr
+#######
+# $   #
+# $ $$#
+# $ $ #
++ $  $*
+#######
+
+;;Title: Leap-frog
+;;Solution(Pushes): rRdRRuLLdlddRRuLuuRRddRdLruLdLruuuLLddRdLruLuuRRddRdrrr
+;;Solution(Moves): rRdRRuLLdlddRRuLuuRRddRdLruLdLruuLLdRdLruLuRRdRdrrr
+#########
++ $ $ $ #
+#$ $$$  #
+# $ $ $$#
+# $  $  *
+#########
+
+;;Title: Shuttles
+;;Solution(Pushes): rrdRRdddLLuuurrdLLddrRRRuuuLLLLdRRurruLdrruLdlldLLuRRRRdddlLLLuuurruRRddddrr
+;;Solution(Moves): rrdRRdddLLuuurrdLLddrRRRuuuLLLLdRRurruLLddLLuRRRRdddlLLLuuurruRRddddrr
+#########
++  $$$ $#
+#  $ $  #
+#  $ $$$#
+#$ $ $ $#
+#  $  $ *
+#########
+
+;;Title: The Nudge
+;;Solution(Pushes): rRuuRRRRdLdLLuLurrdRRuLLdLdRRuRuLLrrdLdLLuRurrdLurrrddr
+;;Solution(Moves): rRuuRRRRdLdLLuLurrdRRuLLdLdRRuRuLLrrdLdLLuLuRRRRRdrdr
+##########
+#$ $     #
+#  $ $ $$#
++ $$ $$$ *
+##########
+
+;;Title: Roundabout
+;##########
+;+  $ $ $$#
+;#  $ $ $$#
+;#$ $ $$$ #
+;#  $ $ $$#
+;#    $ $$*
+;##########
+
+;;Title: Opening Gambit
+;;Solution(Pushes): rurRRdLdLdRRuRRuuLLLdRRuLrdLurrrdLdLLdLLuRuRurrrddr
+;;Solution(Moves): rurRRdLdLdRRuRRuuLLLdRRuLrdLurrrdLdLLdLLuRuRurrrddr
+#########
+#  $ $  #
++ $$ $$ #
+# $ $ $ *
+#$ $$$  #
+#########
+
+;;Title: Loop-de-Loop
+;;Solution(Pushes): rrrdrRRuruLdLruRRRdrRRuLdLruLdrdLuLruLdLruRRRdrrdLdlLLLuuuLdrRRuLdLruLdLruRRRdrrddr
+;;Solution(Moves): rrrdrRRuruLdLruRRRdrRRuLdLruLdrdLuLruLdLruRRRdrrdLdlLLLuuuLdrRRuLdLruLdLruRRRdrrddr
+################
+# $$$$$ $$ $$  #
++   $$  $$  $$ #
+#$$  $ $$ $$$  #
+#   $$$$$$$$  $*
+################
+
+;;Title: Nudge-nudge
+;;Solution(Pushes): ruRldRlddrruRuLLddrRuuRuLLdLddrruLLuRuRRdRdrdLLLLrrruuLuLLdLdRdrrrruur
+;;Solution(Moves): rRluRdldRdrRuuLLddrruuRuLLdLddrruLLuRuRRdRdrdLLLLrrruuLuLLdLdRdrrrruur
+#########
+# $$ $$ #
++ $ $ $ *
+# $ $$$ #
+#   $$  #
+#########
+
+;;Title: To and Fro
+;;Solution(Pushes): rrdRdRdrdLdRRurrdLLurrRdrRRuruuLLrrddldlLLullLdRRulldLLuurRuRRRururrrr
+;;Solution(Moves): rrdRdRdrdLdRRurrdLLurrRdrRRuruuLLrrddldlLLullLdRRulldLLuRuRuRRRururrrr
+###############
++   $$$$$     *
+#$ $$$$$  $$$ #
+# $ $$$ $$$$  #
+#$ $  $$$$$$$ #
+# $$$ $   $$  #
+#$ $ $ $$  $  #
+###############
+
+;;Title: Ragged Rascal
+;;Solution(Pushes): ruuuRRRddRululllddddrRuLuluurrrdrdLuLrdLurRdrddlLLLuRuRuLrdLdLdrrrruuur
+;;Solution(Moves): ruRlddrRuLuluuRRRRddLuLrdLurRdrddlLLLuRuRuLrdLdLdrrrruuur
+########
+# $    #
+# $$  $*
+# $$ $ #
++ $ $$$#
+#  $   #
+########
+
+;;Title: Hold Your Horses
+;;Solution(Pushes): rruuRRllddRdRRRRuLLuLullldddrrrruRRdLLLLulluurrrdLddRRRRuuruLLLLrrrdddLLLLuuRurrrrdLddrr
+;;Solution(Moves): rruuRRllddRdRRRRuLLuLullldddrrrruRRdLLLLulluurrrdLddRRRRuuruLLLLrrrdddLLLLuuRurrrrdLddrr
+##########
+#  $$$   #
+#  $$ $$$#
++  $$$ $ #
+# $ $    *
+##########
+
+;;Title: Knot Theory
+;;Solution(Pushes): rrdddRRuuuLLddddRRuuuurrddLLdddLLuuuuuRRddrruuLLddddLLuuuuRRdddLLuRRRdrddr
+;;Solution(Moves): rrdddRRuLLddRRuurruuLLdddddLLuuuRRuurrddLLddLLuuRRdLLuuuRRddRdrddr
+########
++  $ $ #
+#$ $ $ #
+#  $ $ #
+#$ $$  #
+#$ $$  #
+#  $ $$*
+########
+
+;;Title: Rack and Pinion
+;;Solution(Pushes): rrRRddLruRRdRdRRuLuLuLLdLdRdLuLrdLuruRuRRdLdRdRRuuuLLLdRRuLrdLurrrdLddLLuLuRurrrddr
+;;Solution(Moves): rrRRddLruRRdRdRRuLuLuLLdLdRdLuLrdLuruRRdRdRRuLuLuLLdLdRdLuLrdLuruRRdRdRRuLuLurrrddr
+############
++  $$ $ $  #
+#$$$ $ $$  #
+# $$  $ $ $*
+#$$ $$$ $  #
+############
+
+;;Title: Blue Meanie
+;;Solution(Pushes): rRRdLdRuRldRdLruLdLruLdrRRRuuuLLLdLruRRdRddlLLLuRuLrdLdrRRRuruuLrddldlLLLuurRuRRddrdr
+;;Solution(Moves): rRRdLdRRdLLuurRdLLdrRRRuuuLLLdLruRRdRddlLLLuRuLrdLdrRRRuruuLrddldlLLLuurRuRRddrdr
+#########
++ $$ $  #
+# $  $ $#
+#$ $$$  #
+#  $  $ *
+#########
+
+;;Title: Up, Up and Away
+;;Solution(Pushes): rRRluRdlluuuRuRRdLdddlluuuuuuRuRRdLLuluuurRllddRluurrdLdddRRuLLdlddddddrruuuRuLLdldddrruuRuuruLuuruuur
+;;Solution(Moves): rRRluRdlluuuRuRRdLLuluuRuRRdLLuluRluurRdLdddRRuLLdlddrdRRuLLdldddrruuRuuruLuuruuur
+#######
+#  $  *
+# $ $$#
+# $$  #
+#$ $  #
+# $ $ #
+# $$$ #
+#$ $  #
+# $ $ #
+# $ $ #
+#$ $$ #
++ $   #
+#######
+
+;;Title: Great Things
+;;Solution(Pushes): ruuRRRdddlLuluRddrRuLdLruLdrRuRuLLddLruLdrRuRRuuLLLdRRuLrdLurrrdLdLLdlLuRuRurrrdddr
+;;Solution(Moves): ruuRRRdddlLuluRddrRuLdLruLdrRuRuLLddLruLdrRuRRuuLLLdRRuLrdLurrrdLdLLdlLuRuRurrrdddr
+#########
+# $ $   #
+# $$ $$ #
++  $ $ $#
+# $  $$$*
+#########
+
+;;Title: Through and Through
+;;Solution(Pushes): rRRdLuruRRddrRRuLdLruLdLruRRuLLuLrdLddrRRuuRRRurRdLuLrdRddLruLdLruLuurRdLuLrdLddrRRuruur
+;;Solution(Moves): rRRdLuruRRddrRRuLdLruLdLruRRuLLuLrdLddrRRuuRRRurRdddLruLdLruLdrRRuLuLuLrdLLdRRRurrur
+#################
+# $$$$  $$$$  $$*
+# $ $$ $$ $ $$  #
++ $ $$ $$$$ $$  #
+# $ $$  $$$$  $ #
+#################
+
+;;Title: Just Enough
+;;Solution(Pushes): rrruRuRRdLdLLLdRRuRuRuLLdLdLddrRuLLuRuRuRRdLdRRdrdLLLLrrruuLLuRuLLdLdLddRRRRRurur
+;;Solution(Moves): rrruRuRRdLdLLLdRRuRuRuLLdLdLddrRuLLuRuRuRRdLdRRdrdLLLLrrruuLLuRuLLdLdLddRRRRRurur
+##########
+#$ $ $$  #
+#$$ $ $$ #
++   $ $ $*
+#$ $$$$  #
+#   $ $  #
+##########
+
+;;Title: The Secret Staircase
+;;Solution(Pushes): rRRRRdlLdldRuRldRRRRRRuuuLLLLLddlLruruRRRdRdRdLLLLLuuLrddRRRRRuuRuLLrrdLddLLLLLulLrurRuRRRdddrrrur
+;;Solution(Moves): rRRRdLdRuRldlLdRRRRRRuuuLLLLdLruRRRdRddLLLLLuRuLddRRRRRRuuRuLLrrdLddLLLLLulLrurRuRRRdddrrrur
+#############
++ $$$ $$    #
+# $$  $$ $ $#
+#$  $$$$ $$ *
+#$ $$       #
+#############
+
+;;Title: Clear the Way
+;;Solution(Pushes): ruurrddRdlLuluurrdLddrRuLdLruLdrRuRRuuLLuLrdLuLrdrRRddLLdlLuuuurRRdrRldRulLLLdLddrRuRRuurrr
+;;Solution(Moves): ruurrddRdlLuluurrdLddrRuLdLruLdrRuRRuuLLLruLLrdrRRddLLdlLuuuurRRdrRldRulLLLdLddrRuRRuRurr
+##########
+#  $  $$$#
+#   $$  $*
+# $ $$$ $#
++ $ $ $$ #
+# $  $ $$#
+##########
+
+;;Title: A Mismatch Made in Heaven
+;;Solution(Pushes): rRRRuRRdLLLLuRuRRullLdddRRRRRuLLdlllluururrRdLLurrRRRddLrrdLLLrruuullLLLdRdRRdrrruuur
+;;Solution(Moves): rRRRuRRdLLLLuRuRRullLdddRRRRRuLLuLLurRRRRdrddLLruLruullLLLdRdRdRRRuruur
+###########
+# $   $   *
+#$$ $$$$  #
+#$$$ $$   #
++ $ $     #
+###########
+
+;;Title: Double Cross
+;;Solution(Pushes): ruRuuRuuLrddRdLruLdLruuLururRdRRddRdrddlllllLLuurruLdlddrrrrrrruuuur
+;;Solution(Moves): ruRuuRRdLLrruLuuLrdLururRdRRddRdrddlllllLLuurruLdlddrrrrrrruuuur
+###########
+# $  $$$$ #
+# $  $ $$ #
+# $ $$$$ $*
+#$ $$  $  #
+#  $   $$$#
+# $$$$$$  #
++  $      #
+###########
+
+;;Title: Zen Garden
+;;Solution(Pushes): rdRRurRdLuLrdLuLrdLurRRddRululLLdRuRldRulLdlddrdRulluururRdLuLrdLurRRdrdLdLLddlluuRlddrruLdrrrrruuuulldRululLLdRuRldRulLdlddrddrrrrruuLLruLdrruuur
+;;Solution(Moves): rdRRurRdLuLrdLuLrdLurRRddRululLLdRuRldRulLdlddrdRulluururRdLuLrdLurRRdrdLdLLdLdrrrrruuuulldRululLLdRuRldRulLdlddRddrrrrruuLLruLdrruuur
+#########
++ $  $$ *
+# $ $$  #
+#$$$$ $ #
+#   $ $$#
+#$ $$$$ #
+#       #
+#########
+
+;;Title: Inside Out
+;Actually, a variant of the original with one fewer columns
+;;Solution(Pushes): ruuuuRldRuluuurrrrrrrrrrdLdlllllLdLLdldddddrrrrrrrrrrrruuuuLrdLrdddlllllllllllluuRuRRurruLLdrrRRurRuRRuruur
+;;Solution(Moves): ruRluRluRluuRluurrrrrrrrrrddddlLLdllLLuRRdlldLLuuluRuluurrrrrrrrrrdLdllllLLdLLdddRRurruLLdrrRRurRuRRuruur
+###############
+#           $ *
+# $$$$$$$$$  $#
+# $$$      $$ #
+# $ $$$$$$$ $ #
+# $$$ $$$  $$ #
+# $ $   $  $$ #
+# $ $$$$$$ $$ #
++ $ $ $   $$$ #
+# $$$$$$$$$$$ #
+#             #
+###############
+
+;;Title: Double Decker
+;;Solution(Pushes): ruRRRddRRuuLrdLuLrdRdLLuuLrdLuLrdRdRRuurrdLurrddLruulldRulldLdRRuRulldLdLLuuRldRuRldLdRRuulLddllddrdRdRRRuLrdLLLLuRRuLLddRRuLLuRRRdrRRdLuLLuLLLdRdRRRururrr
+;;Solution(Moves): ruRRRddRRuuLrdLuLrdRdLLuuLrdLuLrdRdRRuurrdLurrddLruulldRulldLdRRuRulldLdLLuuRldRuRldLdRRuulLddllddrdRdRRRuLrdLLLLuRRuLLddRRuLLuRRRdrRRdLuLLuLLLdRdRRRurRurr
+###########
+# $  $$   #
++ $$ $ $ $#
+#$ $ $$   #
+# $$$$$$$$#
+#  $ $$$$ *
+#$ $$  $  #
+# $ $$$   #
+###########
+
+;;Title: Back to Front
+;;Solution(Pushes): rrrrrrrrrrrddddLLLLuRRRdllluLLLuRRRdRRRdllluuLLdLLLdRRRRdRRdLdLruRuLLuLLLLuRRRuRRddrrrrdddLLLuRuulluuLLdLLLdRRRRddLLdRluRdRluRdRluuRRRdLLdRluRRuLLLdLLdlllddrrrrrrrrrrr
+;;Solution(Moves): rrrrrrrrrrrddddLLLLuRRRdllluLLLuRRRdRRRdllluuLLdLLLdRRRRdRRdLdLruRuLLuLLLLuRRRuRRddrrrrdddLLLuRuulluuLLdLLLdRRRRddLLdRluRdRluRdRluuRRRdLLdRluRRuLLLdLLdlllddrrrrrrrrrrr
+#############
++           #
+#$$$$$$$$$$ #
+#$$$ $$$$   #
+#$ $ $$ $   #
+#    $ $$$$ #
+#$$$$$ $$   #
+# $$$ $$ $$ #
+#    $$  $$$#
+# $$$$$$$$$$#
+#           *
+#############
+
+;;Title: The Beast
+;;Solution(Pushes): rRddRRuuLLddlddddrRlluuuurrrdddRdLLLuuluurrrddRdLLulluurrrdLddRRuLLLddRRRuLuRRuuLLLLuuRRddRRddLLdRdLLLuuRuRuuuLLddRlldddrdRRRuuRRuuRuurrr
+;;Solution(Moves): rRddRRuuLLddlddddrRlluuuurrrdddRdLLLuuluurrrddRdLLulluurrrdLddRRuLLLddRRRuLuRRuuLLLLuuRRddRRddLLdRdLLLuuRuRuuuLLddRlldddrdRRRuuRRuuRuurrr
+############
++ $ $$ $   *
+#$ $ $$$ $$#
+#  $ $ $   #
+# $$ $$ $$$#
+#  $ $ $ $ #
+# $$ $ $$$ #
+#  $ $$$ $ #
+############
+
