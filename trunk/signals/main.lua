@@ -121,6 +121,21 @@ function new_killbot(waves, num_control_lines)
 	end
 	table.insert(new_kb.multipliers, 0)
 	
+	-- shuffle multipliers
+	for i = 2, #new_kb.multipliers - 1 do
+		local r = math.random(i, #new_kb.multipliers)
+		local t = new_kb.multipliers[r]
+		new_kb.multipliers[r] = new_kb.multipliers[i]
+		new_kb.multipliers[i] = t
+	end
+	
+	local mu_str = "multipliers: "
+	for i, mu in ipairs(new_kb.multipliers) do
+		mu_str = mu_str .. mu .. ", "
+	end
+	print(mu_str)
+	
+	-- shuffle control lines
 	new_kb.control_lines = {}
 	for i = 1, num_control_lines do
 		table.insert(new_kb.control_lines, table.remove(kb_control_lines, math.random(#kb_control_lines)))
@@ -148,7 +163,6 @@ function update_killbots(dt)
 			sta = sta + 1
 			
 			local mul = kb.multipliers[sta]
-			
 			kb.t = kb.t + kb_spd * mul * dt
 			if kb.t >= 1 then
 				game_over = true
