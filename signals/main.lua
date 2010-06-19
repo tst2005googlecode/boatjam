@@ -73,46 +73,86 @@ kb_trk = {
 
 kb_w = 16
 kb_h = 16
-kb_spd = 0.1
+kb_spd = 0.025
 
 function reset_killbots()
 	kb_tbl = {}
+	kb_control_lines = { 1, 2, 3, 4, 5, 6, 7, 8 }
+	
 	table.insert(kb_tbl, 
 		new_killbot(
 			{
 				{func = wfs.sqr, scale = 1},
-			}
+			},
+			3
 		))
 	table.insert(kb_tbl, 
 		new_killbot(
 			{
 				{func = wfs.sqr, scale = 1}, 
 				{func = wfs.tri, scale = 0.5},
-			}
+			},
+			3
 		))
 	table.insert(kb_tbl, 
 		new_killbot(
 			{
 				{func = wfs.sin, scale = 1}, 
 				{func = wfs.sin, scale = 0.5},
-			}
+			},
+			2
 		))
 end
 
-function new_killbot(waves)
+function new_killbot(waves, num_control_lines)
 	local new_kb = {}
 	new_kb.t = 0
 	new_kb.waves = waves
 	new_kb.on = true
+	new_kb.num_states = math.pow(2, num_control_lines)
+	
+	local min_increment, max_increment = 1, 3
+	local increment = (max_increment - min_increment) / (new_kb.num_states - 2)
+
+	-- assign multipliers
+	new_kb.multipliers = { 1 }
+	for i = 2, new_kb.num_states - 1 do
+		table.insert(new_kb.multipliers, new_kb.multipliers[i-1] + increment)
+	end
+	table.insert(new_kb.multipliers, 0)
+	
+	new_kb.control_lines = {}
+	for i = 1, num_control_lines do
+		table.insert(new_kb.control_lines, table.remove(kb_control_lines, math.random(#kb_control_lines)))
+	end
+	
+	local cl_str = "control lines: "
+	for i, cl in ipairs(new_kb.control_lines) do
+		cl_str = cl_str .. cl .. ", "
+	end
+	print(cl_str)
+	
 	return new_kb
 end
 
 function update_killbots(dt)
 	local game_over = false
 	for i, kb in ipairs(kb_tbl) do
-		kb.t = kb.t + kb_spd * dt
-		if kb.t >= 1 then
-			game_over = true
+		if kb.on then
+			local sta = 0
+			for j, v in ipairs(kb.control_lines) do
+				if wc_tbl[v].on then
+					sta = sta + math.pow(2, j - 1)
+				end
+			end
+			sta = sta + 1
+			
+			local mul = kb.multipliers[sta]
+			
+			kb.t = kb.t + kb_spd * mul * dt
+			if kb.t >= 1 then
+				game_over = true
+			end
 		end
 	end
 	
