@@ -14,23 +14,37 @@ wave_control = {
 
 -- wave functions have a period of 16 units
 wfs = {
-	saw = function (x) local i, f = math.modf(x * 0.125) return 8 * (f * 2 - 1) end, -- sawtooth
-	sqr = function (x) local i, f = math.modf(x * 0.125) return 8 * ((i % 2) * 2 - 1) end, -- square
-	sin = function (x) return 8 * math.sin(x * math.pi * 0.125) end, -- sin
-	tri = function (x) local i, f = math.modf(x * 0.125) return -16 * (((i % 2) - 0.5) * (f * 2 - 1)) end, -- triangle
+	saw = function (x) local i, f = math.modf(x * 0.125) return (f * 2 - 1) end, -- sawtooth
+	sqr = function (x) local i, f = math.modf(x * 0.125) return ((i % 2) * 2 - 1) end, -- square
+	sin = function (x) return math.sin(x * math.pi * 0.125) end, -- sin
+	tri = function (x) local i, f = math.modf(x * 0.125) return -2 * (((i % 2) - 0.5) * (f * 2 - 1)) end, -- triangle
 }
 
 function reset_wave_control()
 	wc_tbl = {
-		{ func = wfs.saw, scale = 1, on = true },
+		{ func = wfs.saw, scale = 1, on = false },
 		{ func = wfs.sqr, scale = 1, on = false },
-		{ func = wfs.sin, scale = 1, on = true },
+		{ func = wfs.sin, scale = 1, on = false },
 		{ func = wfs.tri, scale = 1, on = false },
-		{ func = wfs.saw, scale = 0.5, on = true },
+		{ func = wfs.saw, scale = 0.5, on = false },
 		{ func = wfs.sqr, scale = 0.5, on = false },
-		{ func = wfs.sin, scale = 0.5, on = true },
+		{ func = wfs.sin, scale = 0.5, on = false },
 		{ func = wfs.tri, scale = 0.5, on = false },
 	}
+end
+
+function draw_wave(func, scale, offs, x, y, w, h)
+	for i = 0, w - 1 do
+		local y1, y2 = func(i) * scale * h * 0.5, func(i + 1) * scale * h * 0.5
+		love.graphics.line(x + offs + i, y + y1, x + offs + i + 1, y + y2)
+		love.graphics.line(x + offs + i + w, y + y1, x + offs + i + 1 + w, y + y2)
+	end
+	
+	local r, g, b, a = love.graphics.getColor()
+	love.graphics.setColor(0, 0, 0)
+	love.graphics.rectangle('fill', x, y - h, -w, h * 2)
+	love.graphics.rectangle('fill', x + w, y - h, x + 2 * w, h * 2)
+	love.graphics.setColor(r, g, b, a)
 end
 
 function draw_wave_control()
@@ -38,30 +52,23 @@ function draw_wave_control()
 		local xo = wave_control.x
 		local yo = wave_control.y + i * 32
 
+		local offs = 0
 		if wct.on then
 			love.graphics.setColor(255, 255, 255)
-			xo = xo - 16 * handy_globals.offs
+			offs = -16 * handy_globals.offs
 		else
-			love.graphics.setColor(127, 127, 127)
+			love.graphics.setColor(63, 63, 63)
 		end
-		
-		for x = 0, wave_control.w - 1 do
-			local y1, y2 = wct.func(x) * wct.scale, wct.func(x + 1) * wct.scale 			
-			love.graphics.line(xo + x, yo + y1, xo + x + 1, yo + y2)
-			love.graphics.line(xo + x + wave_control.w, yo + y1, xo + x + wave_control.w + 1, yo + y2)
-		end
+
+		draw_wave(wct.func, wct.scale, offs, xo, yo, wave_control.w, 16)
 	end
-	
-	love.graphics.setColor(0, 0, 0)
-	love.graphics.rectangle('fill', 0, 0, wave_control.x, 320)
-	love.graphics.rectangle('fill', wave_control.x + wave_control.w, 0, 480, 320)
 end
 
 -- KILLBOTS!
 kb_trk = {
-	x = 192,
+	x = 216,
 	y = 16,
-	w = 272,
+	w = 248,
 }
 
 kb_w = 16
@@ -96,6 +103,7 @@ function new_killbot(waves)
 	local new_kb = {}
 	new_kb.t = 0
 	new_kb.waves = waves
+	new_kb.on = true
 	return new_kb
 end
 
@@ -120,19 +128,15 @@ function draw_killbots()
 		love.graphics.setColor(255, 0, 0)
 		love.graphics.rectangle('fill', x, y, kb_w, kb_h)
 		
+		local offs = 0
+		if kb.on then
+			offs = -16 * handy_globals.offs
+		end
+
 		-- draw control signals
 		love.graphics.setColor(255, 255, 255)
-		for j = 0, kb_w * 2 - 1 do
-			local y1, y2 = 0, 0
-			for k, wf in ipairs(kb.waves) do
-				y1 = y1 + wf.func(j) * wf.scale
-				y2 = y2 + wf.func(j + 1) * wf.scale
-			end
-			
-			y1 = y1 / #kb.waves
-			y2 = y2 / #kb.waves
-			
-			love.graphics.line(x + j, y + y1 - 16, x + j + 1, y + y2 - 16)
+		for k, wf in ipairs(kb.waves) do
+			draw_wave(wf.func, wf.scale, offs, x - 0.5 * kb_w, y - kb_h, 2 * kb_w, kb_h)
 		end
 	end
 end
@@ -184,5 +188,21 @@ function love.keyreleased(key, uni)
 			reset_killbots()
 			game_over = false
 		end
+	elseif '1' == key then
+		wc_tbl[1].on = not wc_tbl[1].on
+	elseif '2' == key then
+		wc_tbl[2].on = not wc_tbl[2].on
+	elseif '3' == key then
+		wc_tbl[3].on = not wc_tbl[3].on
+	elseif '4' == key then
+		wc_tbl[4].on = not wc_tbl[4].on
+	elseif '5' == key then
+		wc_tbl[5].on = not wc_tbl[5].on
+	elseif '6' == key then
+		wc_tbl[6].on = not wc_tbl[6].on
+	elseif '7' == key then
+		wc_tbl[7].on = not wc_tbl[7].on
+	elseif '8' == key then
+		wc_tbl[8].on = not wc_tbl[8].on
     end
 end
