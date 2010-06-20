@@ -1,3 +1,5 @@
+require('console.lua')
+
 handy_globals = {
     rads = 0,
 	offs = 0,
@@ -202,6 +204,8 @@ function love.load()
 end
 
 function love.update(dt)
+    console:update()
+    
     -- update handy globals
     handy_globals.rads = handy_globals.rads + dt
     while handy_globals.rads > 2 * math.pi do
@@ -222,6 +226,10 @@ function love.draw()
     love.graphics.scale(love.graphics.getWidth() / 480, love.graphics.getHeight() / 320)
     
     love.graphics.push()
+    
+    if not console.client then
+        love.graphics.print(console.port, 0, 12)
+    end
     
 	draw_wave_control()
 	draw_killbots()
