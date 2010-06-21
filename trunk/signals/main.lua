@@ -43,7 +43,7 @@ function draw_wave(func, scale, offs, x, y, w, h)
 	end
 	
 	local r, g, b, a = love.graphics.getColor()
-	love.graphics.setColor(0, 0, 0)
+	love.graphics.setColor(127, 127, 127)
 	love.graphics.rectangle('fill', x, y - h, -w, h * 2)
 	love.graphics.rectangle('fill', x + w, y - h, x + 2 * w, h * 2)
 	love.graphics.setColor(r, g, b, a)
@@ -199,6 +199,7 @@ end
 
 -- love callbacks
 function love.load()
+	love.graphics.setBackgroundColor(127, 127, 127)
 	reset_wave_control()
 	reset_killbots()
 end
